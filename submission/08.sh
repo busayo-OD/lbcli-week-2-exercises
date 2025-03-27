@@ -27,4 +27,4 @@ AMOUNT=0.2  # 20,000,000 satoshis (0.2 BTC)
 # Create raw transaction with RBF enabled (sequence 0xfffffffd)
 NEW_RAW_TX=$($BITCOIN_CLI createrawtransaction '[{"txid":"'"$TXID"'","vout":'"$VOUT"',"sequence":4294967293}]' '{"'"$DEST_ADDRESS"'":'"$AMOUNT"'}')
 
-echo "Raw Transaction with RBF: $NEW_RAW_TX"
+echo "$NEW_RAW_TX"

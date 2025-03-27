@@ -12,4 +12,4 @@ decoded_tx=$(bitcoin-cli -regtest decoderawtransaction "$raw_tx")
 total_output=$(echo "$decoded_tx" | jq '[.vout[].value] | add * 100000000')
 
 # Print the total output value
-echo "Total Output Value: $total_output satoshis"
+echo "$total_output"

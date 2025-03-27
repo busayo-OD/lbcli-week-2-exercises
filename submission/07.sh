@@ -22,4 +22,4 @@ AMOUNT=0.2
 # Create raw transaction using extracted UTXO details
 NEW_RAW_TX=$($BITCOIN_CLI createrawtransaction '[{"txid":"'"$TXID"'","vout":'"$VOUT"'}]' '{"'"$DEST_ADDRESS"'":'"$AMOUNT"'}')
 
-echo "Raw Transaction: $NEW_RAW_TX"
+echo "$NEW_RAW_TX"

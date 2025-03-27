@@ -7,6 +7,6 @@ raw_tx="01000000000101c8b0928edebbec5e698d5f86d0474595d9f6a5b2e4e3772cd9d1005f23
 # Decode the transaction and extract txid
 txid=$(bitcoin-cli -regtest decoderawtransaction "$raw_tx" | jq -r '.txid')
 
-# Print the transaction ID
-echo "Transaction ID: $txid"
+# Print only the TXID (no extra text)
+echo "$txid"
 
